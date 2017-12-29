@@ -30,18 +30,49 @@ $('div').text("Hola Mundo");
 
 /*=====  Alert de forma diferente      ======*/
 
+/*=========================================
+=            Manejo de errores            =
+=========================================*/
+/*
 $.when($.ready,$.getScript("js/script.js") ).then(function(){
 console.log("pasó");
 
 }).catch(function(){
 console.log("No pasó");
 });
+*/
+/*=====  End of Manejo de errores  ======*/
+
+/*=========================================
+=            getter and setter            =
+=========================================*/
+
+$(document).ready(function(){
+
+$("#parrafo").html("Nuevo Hola");
+
+$("#parrafo").attr("style","background-color:red");
+$("#parrafo").attr("id","nuevoId");
+$("#nuevoId").attr("class","nuevaClase");
+$("#prueba").attr("placeholder","Este es el placeholder");
+$("#prueba").attr("maxlength","1");
+});
+
+
+
+
+
+/*=====  End of getter and setter  ======*/
+
+
 
 </script>
 
 	<h1 class="saludo">Hola codigo facilito</h1>
 	<p id="parrafo">Saludo a todos</p>
 	<div>:)</div>
+
+	<input type="text" id="prueba">
 	
 </body>
 </html>
