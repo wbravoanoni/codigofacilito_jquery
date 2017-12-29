@@ -29,6 +29,14 @@ $('div').text("Hola Mundo");
 //$("#parrafo").ready(function(){alert("Cargo el parrafo")});
 
 /*=====  Alert de forma diferente      ======*/
+
+$.when($.ready,$.getScript("js/script.js") ).then(function(){
+console.log("pasó");
+
+}).catch(function(){
+console.log("No pasó");
+});
+
 </script>
 
 	<h1 class="saludo">Hola codigo facilito</h1>
