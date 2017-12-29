@@ -72,6 +72,29 @@ $("#mensaje").css({'background-color':'blue','text-align':'center','color':'whit
 */
 /*=====  End of Metodo css  ======*/
 
+/*========================================
+=        prueba de hide-show    	    =
+========================================*/
+
+$(document).ready(function(){
+
+$("#mensaje").hide();
+
+$("#mostrar").hover(function(){
+
+$("#mensaje").show(1000);
+
+});
+
+$("#ocultar").hover(function(){
+$("#mensaje").hide(1000);
+});
+
+
+});
+
+
+/*=====  End of prueba de hide-show  ======*/
 
 
 
@@ -79,7 +102,14 @@ $("#mensaje").css({'background-color':'blue','text-align':'center','color':'whit
 
 	<h1 class="saludo">Hola codigo facilito</h1>
 	<p id="parrafo">Saludo a todos</p>
-	<div id="mensaje">Este es el texto a cambiar</div>
+		<div id="mostrar" class="principal">mostrar</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="ocultar" class="principal">ocultar</div>
+	<div id="mensaje" class="principal">Este es el texto a cambiar</div>
 
 	<input type="text" id="prueba">
 	
