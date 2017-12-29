@@ -127,7 +127,7 @@ for(var i = 0;i<semana.length;i++){
 /*==============================
 =            For of            =
 ==============================*/
-
+/*
 $(document).ready(function(){
 
 var semana=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
@@ -139,13 +139,26 @@ console.log(num);
 
 
 })
-
-
-
-
-
+*/
 /*=====  End of For of  ======*/
 
+/*===================================
+=            Metodo Atrr            =
+===================================*/
+$(document).ready(function(){
+
+$("#fotografia").attr("Width","200");
+
+$('#pruebaBoton').click(function(){
+
+$("#fotografia").attr("src","http://spanish.xinhuanet.com/photo/2017-04/16/136212732_14923330838411n.jpg");
+
+});
+
+});
+
+
+/*=====  End of Metodo Atrr  ======*/
 
 
 
@@ -164,6 +177,10 @@ console.log(num);
 	<div id="mensaje" class="principal">Este es el texto a cambiar</div>
 
 	<input type="text" id="prueba">
+
+	<img id="fotografia" src="https://imagenestristes.org/wp-content/uploads/2016/01/imagen-de-gato-triste-1024x692.jpg" alt="">
+
+	<button id="pruebaBoton" onclick="">Cambiar Imagen</button>
 	
 </body>
 </html>
