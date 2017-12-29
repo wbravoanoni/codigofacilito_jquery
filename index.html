@@ -75,7 +75,7 @@ $("#mensaje").css({'background-color':'blue','text-align':'center','color':'whit
 /*========================================
 =        prueba de hide-show    	    =
 ========================================*/
-
+/*
 $(document).ready(function(){
 
 $("#mensaje").hide();
@@ -92,9 +92,45 @@ $("#mensaje").hide(1000);
 
 
 });
-
+*/
 
 /*=====  End of prueba de hide-show  ======*/
+
+/*=========================================
+=            iterar each y for            =
+=========================================*/
+
+$(document).ready(function(){
+
+var semana=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+
+//Recorrer con each
+/*
+
+$.each(semana,function(i,value){
+console.log(i+":"+value);
+});
+*/
+
+//recorrer con for
+/*
+console.log("El tamaño del array es: "+semana.length);
+for(var i = 0;i<semana.length;i++){
+	console.log(i+" -> "+semana[i]);
+}
+
+*/
+
+});
+
+
+
+
+
+
+
+/*=====  End of iterar each y for  ======*/
+
 
 
 
