@@ -8,10 +8,19 @@
 <body>
 
 <script>
-$(document).ready(function(){alert("Hola")});
+$(document).ready(function(){
+
+//$("#parrafo").html("Soy el nuevo contenido");
+$("#parrafo").text("Soy el nuevo contenido");
+$(".saludo").css({'background-color':'red','font-weight':'800'});
+$('div').text("Hola Mundo");
+});
+
 </script>
 
-	<h1>Pagina de inicio</h1>
+	<h1 class="saludo">Hola codigo facilito</h1>
+	<p id="parrafo">Saludo a todos</p>
+	<div>:)</div>
 	
 </body>
 </html>
