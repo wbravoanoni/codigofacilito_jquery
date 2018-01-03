@@ -145,11 +145,12 @@ console.log(num);
 /*===================================
 =            Metodo Atrr            =
 ===================================*/
+/*
 $(document).ready(function(){
 
 $("#fotografia").attr("Width","200");
 
-$('#pruebaBoton').click(function(){
+$('#pruebaBoton').dblclick(function(){
 
 $("#fotografia").attr("src","http://spanish.xinhuanet.com/photo/2017-04/16/136212732_14923330838411n.jpg");
 
@@ -157,9 +158,31 @@ $("#fotografia").attr("src","http://spanish.xinhuanet.com/photo/2017-04/16/13621
 
 });
 
-
+*/
 /*=====  End of Metodo Atrr  ======*/
 
+/*===================================
+=            dimensiones            =
+===================================*/
+
+$(document).ready(function(){
+
+$('#fotografia').click(function(){
+var tamano=$('#fotografia').width();
+var altura=$('#fotografia').height();
+
+alert(" Width: "+tamano+" Height: "+altura);
+
+});
+
+
+$("#fotografia").dblclick(function(){
+$('#fotografia').width(600);
+});
+
+});
+
+/*=====  End of dimensiones  ======*/
 
 
 
