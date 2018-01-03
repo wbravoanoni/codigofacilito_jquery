@@ -258,7 +258,7 @@ $("#eventoTeclado").css({"background-color":"white"});
 /*========================================
 =            Eventos de Mouse            =
 ========================================*/
-
+/*
 $(document).ready(function(){
 /*
 $("#icon").mousedown(function(){
@@ -269,7 +269,7 @@ $("#icon").removeClass("fa fa-volume-off").addClass("fa fa-volume-up");
 	}
 
 });
-*/
+
 $("#icon").mousedown(function(){
 $("#icon").removeClass("fa fa-volume-up fa fa-usb").addClass("fa fa-volume-off");
 });
@@ -283,8 +283,37 @@ $("#icon").removeClass("fa fa-volume-off").addClass("fa fa-usb");
 });
 
 });
-
+*/
 /*=====  End of Eventos de Mouse  ======*/
+
+/*===================================
+=            Metodo Data            =
+===================================*/
+
+$(document).ready(function(){
+
+$("#icon").mousedown(function(){
+$("#icon").data("atrib",{nombre:"fa fa-volume-off",color:"red"});
+var icon =$("#icon").data("atrib");
+
+$("#icon").removeClass("fa fa-volume-up").addClass(icon.nombre);
+$("#icon").css({"color":icon.color});
+
+});
+
+$("#icon").mouseup(function(){
+$("#icon").data("status","cambío");
+$("#icon").removeClass(icon.nombre).addClass("fa fa-volume-up");
+$("#icon").css({"color":"black"});
+
+});
+
+
+
+});
+
+
+/*=====  End of Metodo Data  ======*/
 
 
 
@@ -317,5 +346,11 @@ $("#icon").removeClass("fa fa-volume-off").addClass("fa fa-usb");
 
 	<h1>Prueba<i id="icon" class="fa fa-volume-up" aria-hidden="true"></i></h1>
 	
+	<ul id="colors">
+		<li>Orange</li>
+		<li>Purple</li>
+		<li>White</li>
+	</ul>
+
 </body>
 </html>
