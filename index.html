@@ -4,8 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Curso Jquery</title>
 	<script src="js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="css/font_awesome/css/font-awesome.min.css">
 </head>
 <body>
+
 
 <script>
 
@@ -230,7 +233,7 @@ $("#texto").animate({height:"400px"});
 /*======================================
 =            Evento teclado            =
 ======================================*/
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 var numPresiones=0;
 
@@ -249,9 +252,39 @@ $("#eventoTeclado").css({"background-color":"white"});
 });
 
 });
-
+*/
 /*=====  End of Evento teclado  ======*/
 
+/*========================================
+=            Eventos de Mouse            =
+========================================*/
+
+$(document).ready(function(){
+/*
+$("#icon").mousedown(function(){
+	if($("#icon").hasClass("fa fa-volume-up")){
+$("#icon").removeClass("fa fa-volume-up").addClass("fa fa-volume-off");
+	}else{
+$("#icon").removeClass("fa fa-volume-off").addClass("fa fa-volume-up");
+	}
+
+});
+*/
+$("#icon").mousedown(function(){
+$("#icon").removeClass("fa fa-volume-up fa fa-usb").addClass("fa fa-volume-off");
+});
+
+$("#icon").mouseup(function(){
+$("#icon").removeClass("fa fa-volume-off").addClass("fa fa-volume-up");
+});
+
+$("#icon").mouseleave(function(){
+$("#icon").removeClass("fa fa-volume-off").addClass("fa fa-usb");
+});
+
+});
+
+/*=====  End of Eventos de Mouse  ======*/
 
 
 
@@ -281,6 +314,8 @@ $("#eventoTeclado").css({"background-color":"white"});
 
 	<h6>El Número de presiones es de: <span id="contador">0</span></h6>
 	<input id="eventoTeclado" type="text">
+
+	<h1>Prueba<i id="icon" class="fa fa-volume-up" aria-hidden="true"></i></h1>
 	
 </body>
 </html>
