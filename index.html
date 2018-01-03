@@ -188,7 +188,7 @@ $('#fotografia').width(600);
 /*=================================
 =            Animacion            =
 =================================*/
-
+/*
 $(document).ready(function(){
 
 //efecto desplaza el contenido hacia abajo
@@ -225,8 +225,33 @@ $("#texto").animate({height:"400px"});
 });
 
 */
-
 /*=====  End of Animacion  ======*/
+
+/*======================================
+=            Evento teclado            =
+======================================*/
+$(document).ready(function(){
+
+var numPresiones=0;
+
+$("#eventoTeclado").keypress(function(){
+$("#eventoTeclado").css({"background-color":"red"});
+
+$("#contador").text(numPresiones+=1);
+});
+
+$("#eventoTeclado").keydown(function(){
+$("#eventoTeclado").css({"background-color":"blue"});
+});
+
+$("#eventoTeclado").keyup(function(){
+$("#eventoTeclado").css({"background-color":"white"});
+});
+
+});
+
+/*=====  End of Evento teclado  ======*/
+
 
 
 
@@ -253,6 +278,9 @@ $("#texto").animate({height:"400px"});
 
 	<button id="botonuno" onclick="">Boton 1</button>	
 	<button id="botondos" onclick="">Boton 2</button>
+
+	<h6>El Número de presiones es de: <span id="contador">0</span></h6>
+	<input id="eventoTeclado" type="text">
 	
 </body>
 </html>
