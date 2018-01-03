@@ -164,7 +164,7 @@ $("#fotografia").attr("src","http://spanish.xinhuanet.com/photo/2017-04/16/13621
 /*===================================
 =            dimensiones            =
 ===================================*/
-
+/*
 $(document).ready(function(){
 
 $('#fotografia').click(function(){
@@ -181,8 +181,52 @@ $('#fotografia').width(600);
 });
 
 });
-
+*/
 /*=====  End of dimensiones  ======*/
+
+
+/*=================================
+=            Animacion            =
+=================================*/
+
+$(document).ready(function(){
+
+//efecto desplaza el contenido hacia abajo
+
+/*
+$("#botonuno").click(function(){
+$("#texto").slideDown();
+});
+
+$("#botondos").click(function(){
+$("#texto").slideUp();
+});
+*/
+
+//aparece-desaparece
+/*
+$("#botonuno").click(function(){
+$("#texto").fadeIn(1000);
+});
+
+$("#botondos").click(function(){
+$("#texto").fadeOut(1000);
+});
+*/
+/*
+$("#botonuno").click(function(){
+$("#texto").animate({left: '550px',opacity: '0.5',height: '150px',width: '350px'});
+});
+
+$("#botondos").click(function(){
+$("#texto").animate({height:"400px"});
+});
+
+});
+
+*/
+
+/*=====  End of Animacion  ======*/
 
 
 
@@ -204,6 +248,11 @@ $('#fotografia').width(600);
 	<img id="fotografia" src="https://imagenestristes.org/wp-content/uploads/2016/01/imagen-de-gato-triste-1024x692.jpg" alt="">
 
 	<button id="pruebaBoton" onclick="">Cambiar Imagen</button>
+
+	<h1 id="texto">Soy el texto a mostrar</h1>
+
+	<button id="botonuno" onclick="">Boton 1</button>	
+	<button id="botondos" onclick="">Boton 2</button>
 	
 </body>
 </html>
