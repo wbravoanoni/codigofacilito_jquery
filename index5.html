@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>curso-jquery-padres-hijos-hermanos-de-elementos</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>Padres hijos hermanos de elementos</h1>
+
+	<ol id="padre-ol">
+		<li>Elemento 1</li>
+		<li class="hijo">Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+	</ol>
+
+	<button id="exe">Ejecutar</button>
+
+<script>
+	$(document).ready(function(){
+
+var hijos=$("#padre-ol").children().text();
+var padre=$(".hijo").parent().text();
+var hermanos=$(".hijo").siblings().text();
+
+console.log(hijos);
+console.log(padre);
+console.log(hermanos);
+
+	});
+</script>
+
+	
+</body>
+</html>
+
+
