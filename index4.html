@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>crear-copiar-mover-y-remover-elementos</title>
+		<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<h1 style="text-align:center">Crear copiar mover y remover elementos</h1>
+
+	<ol>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+		<li>Elemento 5</li>
+	</ol>
+
+	<button id="exe">Ejecutar</button>
+
+	<script>
+		
+$(document).ready(function(){
+
+var numero=5;
+/*
+$("#exe").click(function(){
+//Agregar al final de la lista
+	numero=numero+1;
+	$("ol").append("<li>Elemento "+numero+"</li>");
+});
+*/
+
+/*
+$("#exe").click(function(){
+//Agregar al inicio de la lista
+	numero=numero+1;
+	$("ol").prepend("<li>Elemento "+numero+"</li>");
+});
+
+//mover primero al ultimo
+/*
+$("#exe").click(function(){
+	$('ol').append($('ol li:first'));
+});
+*/
+
+//mover ultimo al primero
+/*
+$("#exe").click(function(){
+	$('ol').prepend($('ol li:last'));
+});
+*/
+
+
+$("#exe").click(function(){
+	var clon=$('ol li:last').text();
+	console.log(clon);
+	$('ol').prepend($('ol li:last'));
+
+	//Eliminar ultimo elemento
+	//$('ol li:last').remove();
+});
+
+
+
+});
+
+	</script>
+	
+</body>
+</html>
