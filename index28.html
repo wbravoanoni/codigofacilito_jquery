@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery-metodo-post</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>jquery metodo post</h1>
+
+
+<script>
+
+	$(document).ready(function()		
+{
+	
+$.post('index28.php',{nombre:"Winston"},function(data,status){
+
+$("#cadena").text(data+"El estado es: "+ status);
+
+});
+
+
+});
+
+</script>
+
+<h1 id="cadena"></h1>
+
+</body>
+</html>
