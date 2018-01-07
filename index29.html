@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery-getjson</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>jquery getjson</h1>
+
+
+<script>
+
+	$(document).ready(function()		
+{
+
+
+
+	$("#presionar").click(function(){
+	alert("dentro");
+
+	$.getJSON('index29.php',{
+		nombre:"Winston",
+		apellido1:"Bravo",
+		apellido2:"Anoni"
+	},function(data){
+	$.each(data,function(i,value){
+	console.log(i+" "+value);
+	});
+	});
+	});
+	
+
+});
+
+</script>
+
+<h1 id="cadena"></h1>
+
+<button id="presionar">Presioname</button>
+
+</body>
+</html>
