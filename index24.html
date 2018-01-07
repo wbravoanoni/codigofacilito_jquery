@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Elementos Virtuales</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>Elementos Virtuales</h1>
+
+	<ol id="padre-ol">
+		<li>Elemento 1</li>
+		<li class="hijo">Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>
+	</ol>
+
+	<button id="exe">Ejecutar</button>
+
+<script>
+	$(document).ready(function(){
+
+var hijos=$("#padre-ol").children().text();
+var padre=$(".hijo").parent().text();
+var hermanos=$(".hijo").siblings().text();
+
+
+var contador=0;
+
+$('#exe').click(function(){
+contador+=1;
+
+var li=$('<li>',{text:'Virtual Element '+contador});
+
+$(li).addClass('vElement');
+
+$('#padre-ol').append(li);
+
+$('.vElement').click(function(){
+alert("Este es un elemento: "+contador);
+});
+
+});
+
+
+
+
+	});
+</script>
+
+	
+</body>
+</html>
+
+
