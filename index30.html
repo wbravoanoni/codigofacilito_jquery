@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery-getjson</title>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>jquery getjson</h1>
+
+
+<script>
+
+	$(document).ready(function()		
+{
+
+	$("#ejecutar").click(function(){
+	  sumar($("#valor1").val(),$("#valor2").val());
+		});
+
+		function sumar(val1,val2){
+			var parametros={
+				"val1":val1,
+				"val2":val2
+		}
+		$.ajax({
+
+			data:parametros,
+			url:"index30.php",
+			type:"post",
+			beforeSend:function(){
+				console.log("Se esta procesando tu peticion");
+			}
+		})
+		.done(function(data){
+			$("#resultado").text(data);
+	});
+}
+});
+
+</script>
+<h3 id="resultado"></h3>
+<input type="text" id="valor1">
+<input type="text" id="valor2">
+<input type="submit" id="ejecutar" value="Sumar">
+
+
+</body>
+</html>
